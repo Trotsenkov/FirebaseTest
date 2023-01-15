@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1011652322339",
+    "project_id": "fitnes-journey",
+    "storage_bucket": "fitnes-journey.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1011652322339:android:51573ad95b49a64d53bd96",
+        "android_client_info": {
+          "package_name": "com.dev1.app1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1011652322339-0ik2kihohhmiovouffmhq8lkf59sgtv8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAOiSrEINHyHun8rRfHnzN9YgIx7zczg34"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1011652322339-0ik2kihohhmiovouffmhq8lkf59sgtv8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
