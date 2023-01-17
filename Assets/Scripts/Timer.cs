@@ -22,7 +22,12 @@ public class Timer : MonoBehaviour
     GameObject Note;
     int count = 0;
 
-    void Start()
+    public static void SetActive(bool state)
+    {
+        GameObject.Find("Canvas").SetActive(state);
+    }
+
+    void Awake()
     {
         text = transform.Find("Timer Text").GetComponent<TMP_Text>();
         SavePanel = transform.Find("Save Panel").gameObject;
@@ -73,8 +78,8 @@ public class Timer : MonoBehaviour
         CreateNote(timer, save_input.text);
         timer = 0;
     }
-
-    void CreateNote(float timer, string note)
+    //non-public
+    public void CreateNote(float timer, string note)
     {
         var n = Instantiate(Note, NotesContent);
         (n.transform as RectTransform).position -= new Vector3(0, 140 * count++);

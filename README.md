@@ -1,1 +1,1 @@
-This is my first attempt to add integration with firebase to simple timer app.
+This is my first attempt to add integration with firebase to sime timer.
