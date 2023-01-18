@@ -100,8 +100,13 @@ public class WebView : MonoBehaviour
         {
             yield return new WaitForSeconds(0.1f);
         }
+        if (FBController.FbStatus == FirebaseController.FirebaseStatus.Failed)
+        {
+            Message.Send("Connection error :(");
+        }
         if (FBController.FbStatus == FirebaseController.FirebaseStatus.Connected)
         {
+            Message.Send("Connected to " + Url);
             Url = FirebaseRemoteConfig.DefaultInstance.GetValue("url").StringValue;
             if (Url != "")
                 PlayerPrefs.SetString("key", Url);
@@ -118,7 +123,7 @@ public class WebView : MonoBehaviour
             return;
         }
         bool sim;
-#if !UNITY_ANDROID && !UNITY_IOS
+#if UNITY_EDITOR
         sim = false;
 #else
         sim = (PluginInstance.Call<int>("getSimStatus", UnityActivity) == 1);

@@ -41,7 +41,8 @@ public class FirebaseController : MonoBehaviour
             }
             else
             {
-                Debug.LogError(System.String.Format(
+
+                Message.Send(System.String.Format(
                   "Could not resolve all Firebase dependencies: {0}", dependencyStatus));
             }
         });
@@ -78,7 +79,7 @@ public class FirebaseController : MonoBehaviour
             case Firebase.RemoteConfig.LastFetchStatus.Success:
                 Firebase.RemoteConfig.FirebaseRemoteConfig.DefaultInstance.ActivateAsync()
                 .ContinueWithOnMainThread(task => {
-                    Debug.Log("Succes!");
+                    Message.Send("Succes!");
                     //DebugLog(String.Format("Remote data loaded and ready (last fetch time {0}).",
                     //               info.FetchTime));
                 });
